@@ -1,87 +1,26 @@
-
 {
-  "name": "Filter Bot",
-  "description": "Telegram's sassiest group filter. Modular Telegram group filter bot!",
-  "keywords": [
-    "telegram",
-    "best",
-    "group",
-    "manager",
-    "3"
-  ],
-  "repository": "https://github.com/DarkAngelTG/Filter-Bot",
+  "name": "Image upload bot",
+  "description": "A bot to upload telegram images to telegraph",
+  "repository": "https://github.com/No-OnE-Kn0wS-Me/TG-Media-To-Telegraph",
+  "logo": "https://telegra.ph/file/33adaf8d6c398edf81967.jpg",
+  "keywords": ["telegram", "telegraph", "imageuploader","telegram bot"],
   "env": {
-    "ENV": {
-      "description": "Setting this to ANYTHING will enable env variables",
-      "value": "ANYTHING"
-    },
-    "TOKEN": {
-      "description": "Your bot token, as a string.",
+     "BOT_TOKEN": {
+      "description": "Your Bot token from @Botfather",
       "value": ""
     },
-    "OWNER_ID": {
-      "description": "An integer of consisting of your owner ID",
-      "value": "809546777"
-    },
-    "OWNER_USERNAME": {
-      "description": "Your username",
-      "value": "D_ar_k_Angel"
-    },
-    "WEBHOOK": {
-      "description": "Setting this to ANYTHING will enable webhooks when in env mode messages",
-      "value": "ANYTHING"
-    },
-    "URL": {
-      "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
+    "API_ID": {
+      "description": "Your API_ID from https://my.telegram.org/apps ",
       "value": ""
     },
-    "MESSAGE_DUMP": {
-      "description": "optional: a chat where your replied saved messages are stored, to stop people deleting their old",
-      "value": "-1007777777777"
-    },
-    "SUDO_USERS": {
-      "description": "A space separated list of user_ids which should be considered sudo users",
-      "value": "80954677 699615803"
-    },
-    "SUPPORT_USERS": {
-      "description": "A space separated list of user_ids which should be considered support users (can gban/ungban, nothing else)",
-      "value": "80954677 699615803"
-    },
-    "WHITELIST_USERS": {
-      "description": "A space separated list of user_ids which should be considered whitelisted - they can't be banned.",
-      "value": "80954677 699615803"
-    },
-    "DONATION_LINK": {
-      "description": "Optional: link where you would like to receive donations.",
-      "value": "https://www.paypal.me/Your_id_here"
-    },
-    "PORT": {
-      "description": "Port to use for your webhooks",
-      "value": "8443"
-    },
-    "DEL_CMDS": {
-      "description": "Whether to delete commands from users which don't have rights to use that command",
-      "value": "True"
-    },
-    "STRICT_GBAN": {
-      "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
-      "value": "True"
-    },
-    "ALLOW_EXCL": {
-      "description": "Whether to allow using exclamation marks ! for commands as well as /.",
-      "value": "True"
-    },
-    "BAN_STICKER": {
-      "description": "Which sticker to use when banning people. Use https://telegram.dog/ShowJsonBot to get the file_id",
-      "value": "CAADBQADNwEAAjZzSxRZAc49mnFSSAI"
+    "API_HASH": {
+      "description": "Your API_HASH from https://my.telegram.org/apps",
+      "value": ""
     }
-  },
-  "addons": [
+   },
+   "buildpacks": [
     {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "10"
-      }
+      "url": "heroku/python"
     }
   ]
 }
